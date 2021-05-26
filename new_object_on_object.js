@@ -7,7 +7,7 @@ function autos(marca, modelo, anio) {
   this.anio = anio;
 }
 
-// Utilizamos la palabra reservada `new` que se utiliza para crear un objeto apartir de un objeto
+// Utilizamos el operador `new` va generar una instancia de un objeto que deriva de otro objeto
 
 let autoTesla = new autos("tesla", "teslaX", 2020);
 console.log(autoTesla);

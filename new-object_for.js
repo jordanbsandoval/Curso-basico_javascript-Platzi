@@ -1,25 +1,27 @@
 #!/usr/bin/node
-// Creando un objeto apartir de una funcion constructora y pasandole una lista de parametros
-const entrada1 = process.argv[2];
-const entrada2 = process.argv[3];
-const entrada3 = process.argv[4];
+// Escribe una funcion constructora en el que pueda crear muchos objetos de acuerdo a mi entrada
 
-// funcion constructora
-function autos(marca, modelo, anio) {
+// creo mis entradas
+const marca = process.argv[2];
+const modelo = process.argv[3];
+const anio = process.argv[4];
+
+// creo la funcion constructora
+function creatorObj(marca, modelo, anio) {
   this.marca = marca;
   this.modelo = modelo;
   this.anio = anio;
 }
-// array para guardar los elementos de mi entrada
-let aggAutos = [];
 
+// defino un array donde guardare mis objetos creados apartir de mi funcion constructora
+let arrayObjects = [];
+
+// bucle para crear tantos objetos como mi condicion lo requiera
 for(let i = 0; i < 10; i++) {
-  let marca = process.argv[2];
-  let modelo = process.argv[3];
-  let anio = process.argv[4];
-  aggAutos.push(new autos(marca, modelo, anio));
+  arrayObjects[i] = (new creatorObj(marca, modelo, anio));
 }
 
-for(let i = 0; i < aggAutos.length; i++) {
-  console.log(aggAutos[i]);
+// bucle para observar mis objetos creados apartir de una funcion constructora
+for(let i = 0; i < arrayObjects.length; i++) {
+  console.log(arrayObjects[i]);
 }
