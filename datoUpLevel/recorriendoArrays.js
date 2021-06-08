@@ -21,3 +21,20 @@ let nombreCarrito = carrito.map(function(articulo) {
   return articulo.nombre;
 });
 console.log(nombreCarrito);
+
+// Utilizando el metodo find que devuelve un nuevo array
+let searchCarrito = carrito.find(function(dato) {
+  return (dato.nombre === "lentes");
+});
+console.log(searchCarrito);
+
+// Utilizando el metodo forEach que devuelve un dato y no un array
+carrito.forEach(function(dato) {
+  console.log(dato.nombre);
+});
+
+// Utilizando el metodo some que devuelve un valor booleano dependiendo de la condicion de retorno
+carrito.some(function(dato) {
+  console.log(dato.precio <= 800);
+});
+
