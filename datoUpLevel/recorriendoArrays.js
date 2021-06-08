@@ -10,9 +10,14 @@ const carrito = [
   {nombre: "tv", precio: 450}
 ]
 
-// filtro del precio mas alto en el carrito
+// Utilizando el metodo filter para obtener un nuevo array con el filtro establecido 
 let filtroCarrito = carrito.filter(function(total) {
   return (total.precio > 600);
 });
-
 console.log(filtroCarrito);
+
+// Utilizando el metodo map me genera un nuevo array
+let nombreCarrito = carrito.map(function(articulo) {
+  return articulo.nombre;
+});
+console.log(nombreCarrito);
